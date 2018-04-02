@@ -70,7 +70,7 @@ def screen_record():
             cap.release()
             break
 
-        if cv2.waitKey(5) & 0xFF == ord('h'):
+        if cv2.waitKey(25) & 0xFF == ord('h'):
             idx += 1
             if idx == len(faces):
                 print(kociemba.solve(cubestr(data)))
