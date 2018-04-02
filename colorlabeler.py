@@ -15,3 +15,11 @@ def density(img, color):
 	upper = bounds[color][1]
 	mask = cv2.inRange(img, lower, upper)
 	return np.sum(mask)/255
+
+def cubestr(data):
+	ret = ""
+	for i in "URFDLB":
+		ret += "".join(data[i])
+	for i in "URFDLB":
+		ret = ret.replace(data[i][4], i)
+	return ret
